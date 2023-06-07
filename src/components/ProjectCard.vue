@@ -11,7 +11,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <v-hover v-slot="{ isHovering, props}">
+  <v-hover v-slot="{isHovering, props}">
     <v-card
     :color=" themeColor||'#E5ECF7'"
     theme="light"
@@ -31,7 +31,8 @@ const props = defineProps({
               {{ projectTitle || 'Project Title'}}
             </v-card-title>
 
-            <v-card-subtitle ><p class="text-subtitle-1">{{ projectDescription || 'project description'}}</p></v-card-subtitle>
+            <!-- <v-card-subtitle ><p class="text-subtitle-1">{{ projectDescription || 'project description'}}</p></v-card-subtitle> -->
+            <v-card-text><p class="text-subtitle-1">{{ projectDescription || 'project description'}}</p></v-card-text>
 
              <div class="px-3 pt-5 d-none d-md-block">
                 <v-chip class="ma-1" label v-for="(tag, i) in tags" :key="i">{{tag}}</v-chip>
@@ -45,7 +46,7 @@ const props = defineProps({
         </v-col>
         <v-col cols="12" md="7">
           <v-img
-            :src= "preImg || 'https://cdn.vuetifyjs.com/images/parallax/material.jpg'"
+            :src= "preImg  || 'https://cdn.vuetifyjs.com/images/parallax/material.jpg'"
             cover
           >
             <template v-slot:placeholder>

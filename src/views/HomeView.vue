@@ -27,51 +27,44 @@ const data = ref(projectMetaData);
 </script>
 
 <template>
-  <div class="bg-grey-lighten-4">
-    <v-container class="pa-md-10 pa-sm-2">
+  <div class="bg-grey-lighten-5">
+    <v-container>
       <v-row align="center" justify="center">
-        <v-col class="pa-10" cols="12" md="6">
-          <h1 class="font-weight-bold mb-3 text-h3 text-grey-darken-3">
-            👋🏻 Hi, I am Carolyn Yu.
+        <v-col class="text-center" cols="12" sm="10">
+          <h1 class="text-h5 pt-6 font-weight-medium text-grey-darken-3">
+            👋🏻 Hi, I am Carolyn.
           </h1>
           <br />
-          <p class="text-h5 font-weight-light text-grey-darken-3">
+          <p class="text-p font-weight-light text-grey-darken-3">
             A <strong>UX Designer</strong> based in New York. <br />
             Currently pursuing a master's degree in UX Design at Pratt
-            Institute. <br />Looking for a UX Design internship in the summer
-            2022.
+            Institute. <br />Looking for a Product Designer position in 2023.
           </p>
         </v-col>
-        <v-col class="pa-10 avatarDiv" cols="12" md="6">
-          <!-- <v-img
-          class=""
-          width="500"
-          :aspect-ratio="1"
-          :src="avatarPath"
-          cover
-        ></v-img> -->
+        <!-- <v-col class="pa-10 avatarDiv" cols="12" md="6">
 
           <div class="myavatar-bg mx-auto">
             <div class="myavatar"></div>
           </div>
-        </v-col>
+        </v-col> -->
       </v-row>
     </v-container>
   </div>
 
   <div>
-    <v-container class="pa-md-10 pa-sm-2">
-      <v-row>
-        <v-col class="pa-10" cols="12">
-          <h2 class="pb-1 text-h4 font-weight-medium text-grey-darken-3">
+    <v-container>
+      <v-row justify="center">
+        <v-col cols="12" sm="10">
+          <h2 class="pb-1 text-h6 font-weight-medium text-grey-darken-3">
             Selected Projects
           </h2>
           <hr class="shortLine" />
         </v-col>
       </v-row>
-      <v-row class="pa-10">
+      <v-row justify="center">
         <v-col
           cols="12"
+          sm="10"
           v-for="(project, id) in data"
           :key="id"
           class="projectCard"
